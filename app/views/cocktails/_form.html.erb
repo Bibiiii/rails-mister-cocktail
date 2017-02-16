@@ -1,18 +1,26 @@
+<div class="banner">
+  <div class="banner-content">
+    <h1>Create a new cocktail</h1>
+  </div>
+</div>
+
 <div class="container">
 
   <div class="col-md-offset-3 col-md-6">
-    <%= simple_form_for(@cocktail) do |f| %>
-    <%= f.error_notification %>
-    <div class="form-inputs">
-      <div class="form-group">
-        <%= f.input :name, input_html: { placeholder: "name" } %>
-      </div>
-      <div class="form-actions">
-        <%= f.submit class: "btn btn-primary" %>
-      </div>
+    <div class="add-form">
+      <h2>Name your cocktail</h2>
+      <%= simple_form_for(@cocktail) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-inputs">
+        <div class="form-group">
+          <%= f.input :name, label: "cocktail name", input_html: { placeholder: "name" } %>
+        </div>
+        <div class="form-actions">
+          <%= f.submit class: "btn btn-bib" %>
+        </div>
 
-      <% end %>
-
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

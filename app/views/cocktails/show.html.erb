@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col-md-offset-3 col-xs-6">
       <div class="list">
-          <strong>Description:</strong>
+          <h3>Ingredients:</h3>
           <ul>
             <% @cocktail.doses.each do |dose| %>
             <li> <%= dose.description %> <%= dose.ingredient.name %> </li>

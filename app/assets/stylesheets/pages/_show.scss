@@ -1,0 +1,32 @@
+.cocktail-banner {
+  background-image: linear-gradient( 45deg, rgba(0, 0, 0, 0.3), rgba(121, 121, 121, 0.4) ), url('oldf.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  h1 {
+  font-family: 'Slabo 27px', serif;
+  color: white;
+  font-size: 50px;
+  }
+}
+
+.list {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+  li {
+    list-style: none;
+    margin-left: -40px;
+  }
+  a {
+    color: #DAD4DE;
+    &:hover {
+      text-decoration: none;
+      color: #FCFBFD;
+   }
+  }
+}

@@ -8,9 +8,15 @@
 require 'json'
 require 'open-uri'
 
-uri = URI.parse("http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list")
+url = "http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+
+drinks_serialized = open(url).read
+drinks_list = JSON.parse(drinks_serialized)
 
 
-uri.open {|f|
-  # ...
-}
+
+
+drinks_list["drinks"].each do |ingredient|
+  name = ingredient["strIngredient1"]
+  Ingredient.create(name: name)
+end

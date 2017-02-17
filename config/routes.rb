@@ -12,8 +12,11 @@ Rails.application.routes.draw do
   # get 'cocktails/_form'
 
   resources :cocktails do
-    resources :doses
+    resources :doses, only: :create
   end
+
+
+  resources :doses, only: :destroy
 
   root to: 'cocktails#index'
 

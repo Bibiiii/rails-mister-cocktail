@@ -49,19 +49,15 @@ h3 {
   height: 80px;
   width: 200px;
   padding: 15px;
-  background-color: rgba(121, 121, 121, 0.5);
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px white dotted;
   border-radius: 5px;
   color: white;
-  &:hover {
-    background-color: rgba(121, 121, 121, 0.7);
-  }
   a {
     color: white;
-
     &:hover {
       text-decoration: none;
     }

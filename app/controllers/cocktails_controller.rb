@@ -1,7 +1,11 @@
 class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
   def index
-    @cocktails = Cocktail.all
+    if params[:query].blank?
+      @cocktails = Cocktail.all
+    else
+      @cocktails = Cocktail.where('name ILIKE ?', "%#{params[:query]}%")
+    end
   end
 
   def new
@@ -56,7 +60,7 @@ class CocktailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cocktail_params
-      params.require(:cocktail).permit(:name)
+      params.require(:cocktail).permit(:name, :photo)
     end
 
 end

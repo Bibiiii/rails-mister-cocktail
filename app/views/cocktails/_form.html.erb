@@ -6,7 +6,7 @@
 
 <div class="container">
 
-  <div class="col-md-offset-3 col-md-6">
+  <div class="col-xs-offset-3 col-xs-6">
     <div class="add-form">
       <h2>Name your cocktail</h2>
       <%= simple_form_for(@cocktail) do |f| %>
@@ -14,6 +14,7 @@
       <div class="form-inputs">
         <div class="form-group">
           <%= f.input :name, label: "cocktail name", input_html: { placeholder: "name" } %>
+          <%= f.input :photo, as: :attachinary %>
         </div>
         <div class="form-actions">
           <%= f.submit class: "btn btn-bib" %>
